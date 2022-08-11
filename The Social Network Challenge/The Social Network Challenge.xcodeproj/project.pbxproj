@@ -98,12 +98,11 @@
 		F88BE3B028A525D3002D3D81 /* The Social Network Challenge */ = {
 			isa = PBXGroup;
 			children = (
-				F88BE3B128A525D3002D3D81 /* The_Social_Network_ChallengeApp.swift */,
-				F88BE3B328A525D3002D3D81 /* ContentView.swift */,
+				F88BE3E128A53D9C002D3D81 /* View */,
+				F88BE3E028A53D92002D3D81 /* ViewModel */,
+				F88BE3DF28A53D8D002D3D81 /* Model */,
 				F88BE3B528A525D4002D3D81 /* Assets.xcassets */,
 				F88BE3B728A525D4002D3D81 /* Preview Content */,
-				F88BE3DB28A52823002D3D81 /* API.swift */,
-				F88BE3DD28A537B7002D3D81 /* APIStructs.swift */,
 			);
 			path = "The Social Network Challenge";
 			sourceTree = "<group>";
@@ -131,6 +130,31 @@
 				F88BE3CE28A525D4002D3D81 /* The_Social_Network_ChallengeUITestsLaunchTests.swift */,
 			);
 			path = "The Social Network ChallengeUITests";
+			sourceTree = "<group>";
+		};
+		F88BE3DF28A53D8D002D3D81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F88BE3E028A53D92002D3D81 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F88BE3DB28A52823002D3D81 /* API.swift */,
+				F88BE3DD28A537B7002D3D81 /* APIStructs.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F88BE3E128A53D9C002D3D81 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F88BE3B128A525D3002D3D81 /* The_Social_Network_ChallengeApp.swift */,
+				F88BE3B328A525D3002D3D81 /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
