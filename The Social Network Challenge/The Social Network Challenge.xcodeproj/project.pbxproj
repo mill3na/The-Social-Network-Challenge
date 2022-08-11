@@ -16,6 +16,7 @@
 		F88BE3CF28A525D4002D3D81 /* The_Social_Network_ChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88BE3CE28A525D4002D3D81 /* The_Social_Network_ChallengeUITestsLaunchTests.swift */; };
 		F88BE3DC28A52823002D3D81 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88BE3DB28A52823002D3D81 /* API.swift */; };
 		F88BE3DE28A537B7002D3D81 /* APIStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88BE3DD28A537B7002D3D81 /* APIStructs.swift */; };
+		F88BE3E428A53E56002D3D81 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88BE3E328A53E56002D3D81 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		F88BE3CE28A525D4002D3D81 /* The_Social_Network_ChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Social_Network_ChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F88BE3DB28A52823002D3D81 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		F88BE3DD28A537B7002D3D81 /* APIStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIStructs.swift; sourceTree = "<group>"; };
+		F88BE3E328A53E56002D3D81 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		F88BE3DF28A53D8D002D3D81 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F88BE3E328A53E56002D3D81 /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F88BE3E428A53E56002D3D81 /* Model.swift in Sources */,
 				F88BE3B428A525D3002D3D81 /* ContentView.swift in Sources */,
 				F88BE3DE28A537B7002D3D81 /* APIStructs.swift in Sources */,
 				F88BE3DC28A52823002D3D81 /* API.swift in Sources */,
