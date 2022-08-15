@@ -28,7 +28,7 @@ func getUsers(completion: @escaping (([Users]) -> ())) {
     task.resume() // faz a chamada acontecer
 }
 
-func APIRequestPosts(completion: @escaping (([Posts]) -> ())){
+func getPosts(completion: @escaping (([Posts]) -> ())){
     let url = URL(string: "http://adaspace.local/posts")!
     let task = URLSession.shared.dataTask(with: url) { data, response, error in
         

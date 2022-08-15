@@ -2,44 +2,33 @@
 //  ContentView.swift
 //  The Social Network Challenge
 //
-//  Created by Milena Maia Araújo on 11/08/22.
+//  Created by Milena Maia Araújo on 15/08/22.
 //
 
 import SwiftUI
 
 struct ContentView: View {
-    
-    @State var users: [Users] = []
-    
     var body: some View {
-        VStack{
-            Text("The Social Network Challenge.")
-            
-            ZStack{
-                Rectangle()
-                    .fill(.mint)
-                    .frame(width: 370, height: 200)
-                    .cornerRadius(15)
-                    .padding()
-                if let user = users.first {
-                    VStack {
-                        Text("Numero de usuarios: \(users.count)")
-                        Text(user.id)
-                        Text(user.name)
-                        Text(user.email)
-                        
-                    }
+        NavigationView{
+        TabView{
+            HomeScreenView()
+                .tabItem{
+                    Label("Home", systemImage: "house.fill")
                     
                 }
-            }
-            .onAppear {
-                getUsers { users in
-                    self.users = users
+            FavoritesView()
+                .tabItem {
+                    Label("Favorites", systemImage: "heart")
                 }
-            }
-        }
-        
-        
+            
+            UsersView()
+                .tabItem{
+                    Label("Users", systemImage: "magnifyingglass")
+                }
+            } // tab view
+        .navigationTitle("The Social Network Challenge")
+        .navigationBarTitleDisplayMode(.inline)
+    } // navigation view
     }
 }
 
