@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA6F92DD28ABE5F5009011B8 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6F92DC28ABE5F5009011B8 /* Login.swift */; };
 		AAF99A2428ABB75500A59681 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88BE3E728AA8B45002D3D81 /* FavoritesView.swift */; };
 		F88BE3B228A525D3002D3D81 /* The_Social_Network_ChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88BE3B128A525D3002D3D81 /* The_Social_Network_ChallengeApp.swift */; };
 		F88BE3B428A525D3002D3D81 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88BE3B328A525D3002D3D81 /* HomeScreenView.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA6F92DC28ABE5F5009011B8 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		F88BE3AE28A525D3002D3D81 /* The Social Network Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Social Network Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88BE3B128A525D3002D3D81 /* The_Social_Network_ChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Social_Network_ChallengeApp.swift; sourceTree = "<group>"; };
 		F88BE3B328A525D3002D3D81 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				F88BE3E528AA8789002D3D81 /* ContentView.swift */,
 				F88BE3E728AA8B45002D3D81 /* FavoritesView.swift */,
 				F88BE3E928AA8C3A002D3D81 /* UsersView.swift */,
+				AA6F92DC28ABE5F5009011B8 /* Login.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				F88BE3DE28A537B7002D3D81 /* APIStructs.swift in Sources */,
 				AAF99A2428ABB75500A59681 /* FavoritesView.swift in Sources */,
 				F88BE3DC28A52823002D3D81 /* API.swift in Sources */,
+				AA6F92DD28ABE5F5009011B8 /* Login.swift in Sources */,
 				F88BE3B228A525D3002D3D81 /* The_Social_Network_ChallengeApp.swift in Sources */,
 				F88BE3EA28AA8C3A002D3D81 /* UsersView.swift in Sources */,
 			);
