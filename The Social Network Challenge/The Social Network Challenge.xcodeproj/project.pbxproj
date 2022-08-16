@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AA6F92DD28ABE5F5009011B8 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6F92DC28ABE5F5009011B8 /* Login.swift */; };
 		AAF99A2428ABB75500A59681 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88BE3E728AA8B45002D3D81 /* FavoritesView.swift */; };
+		F833DD2D28AC61770020AF4E /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833DD2C28AC61770020AF4E /* RegisterScreen.swift */; };
 		F88BE3B228A525D3002D3D81 /* The_Social_Network_ChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88BE3B128A525D3002D3D81 /* The_Social_Network_ChallengeApp.swift */; };
 		F88BE3B428A525D3002D3D81 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88BE3B328A525D3002D3D81 /* HomeScreenView.swift */; };
 		F88BE3B628A525D4002D3D81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F88BE3B528A525D4002D3D81 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		AA6F92DC28ABE5F5009011B8 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		F833DD2C28AC61770020AF4E /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		F88BE3AE28A525D3002D3D81 /* The Social Network Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Social Network Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88BE3B128A525D3002D3D81 /* The_Social_Network_ChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Social_Network_ChallengeApp.swift; sourceTree = "<group>"; };
 		F88BE3B328A525D3002D3D81 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				F88BE3E728AA8B45002D3D81 /* FavoritesView.swift */,
 				F88BE3E928AA8C3A002D3D81 /* UsersView.swift */,
 				AA6F92DC28ABE5F5009011B8 /* Login.swift */,
+				F833DD2C28AC61770020AF4E /* RegisterScreen.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F833DD2D28AC61770020AF4E /* RegisterScreen.swift in Sources */,
 				F88BE3E428A53E56002D3D81 /* Model.swift in Sources */,
 				F88BE3B428A525D3002D3D81 /* HomeScreenView.swift in Sources */,
 				F88BE3E628AA8789002D3D81 /* ContentView.swift in Sources */,

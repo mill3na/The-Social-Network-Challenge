@@ -15,13 +15,13 @@ struct LoginView: View {
     @State var password = ""
     var body: some View {
         VStack{
-            
             Text("Login")
                 .font(.title)
                 .fontWeight(.regular)
                 .kerning(1.9) // espaçamento das letras
                 .frame(maxWidth: .infinity, alignment: .leading)
-
+            Spacer()
+    
             VStack(alignment: .leading, spacing: 8, content: {
                 Text("User name")
                     .fontWeight(.regular)
@@ -66,6 +66,17 @@ struct LoginView: View {
                         })
                         .frame(maxWidth: .infinity, alignment: .center)
                         .padding(.top, 10)
+            HStack{
+                Text("Don't have an account?")
+                    .padding(.top, 5)
+            Button(action: {}, label: {
+                Text("Create one.")
+                    .fontWeight(.semibold)
+                    .foregroundColor(.gray)
+            })
+            }
+            Spacer()
+            
         }
         .padding()
         
