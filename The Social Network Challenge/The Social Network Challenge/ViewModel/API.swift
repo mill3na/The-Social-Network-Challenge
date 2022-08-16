@@ -10,7 +10,7 @@ import Foundation
 
 // implemented api communication
 func getUsers(completion: @escaping (([Users]) -> ())) {
-    let url = URL(string: "http://adaspace.local/users%22)!
+    let url = URL(string: "http://adaspace.local/users%22")!
 
     let task = URLSession.shared.dataTask(with: url){
 
@@ -20,8 +20,8 @@ func getUsers(completion: @escaping (([Users]) -> ())) {
         do {let allUsers = try JSONDecoder().decode([Users].self, from: dataResponse)
 //            print("object posts: (posts)")
             completion(allUsers)
-        } catch let error{
-            print("ERROR: (error)")
+        } catch {
+            print("ERROR: \(error)")
         }
     }
 
@@ -29,7 +29,7 @@ func getUsers(completion: @escaping (([Users]) -> ())) {
 }
 
 func getPosts(completion: @escaping (([Posts]) -> ())){
-    let url = URL(string: "http://adaspace.local/posts%22)!
+    let url = URL(string: "http://adaspace.local/posts%22")!
     let task = URLSession.shared.dataTask(with: url) { data, response, error in
 
         guard let dataResponse = data else {return}
@@ -39,8 +39,8 @@ func getPosts(completion: @escaping (([Posts]) -> ())){
             completion(allPosts)
         }
 
-        catch let error {
-            print("ERROR: (error)")
+        catch {
+            print("ERROR: \(error)")
         }
     }
     task.resume()
