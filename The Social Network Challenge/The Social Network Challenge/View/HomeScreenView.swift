@@ -28,11 +28,11 @@ struct HomeScreenView: View {
                             .renderingMode(.template)
                             .foregroundColor(.white)
                     }
-                }
+                } // hstack
                 .padding()
                 
                 HStack{
-                    Text("Trending")
+                    Text("Social Network Challenge")
                         .font(.system(size: 40, weight: .bold))
                         .foregroundColor(.white)
                     
@@ -45,7 +45,7 @@ struct HomeScreenView: View {
                             .foregroundColor(.white)
                             .rotationEffect(.init(degrees: 90))
                     }
-                }
+                } // hstack
                 .padding(.horizontal)
                 
                 HStack{
@@ -71,7 +71,7 @@ struct HomeScreenView: View {
                         .onTapGesture {
                             index = 1
                         }
-                }
+                } // hstack
                 .padding(.horizontal)
                 .padding(.top, 10)
                 
@@ -85,7 +85,7 @@ struct HomeScreenView: View {
             }
         }
         .background(
-            LinearGradient(gradient: .init(colors: [Color.purple, Color.red]), startPoint: .top, endPoint: .bottom))
+            LinearGradient(gradient: .init(colors: [Color.blue, Color.white]), startPoint: .top, endPoint: .bottom))
         .ignoresSafeArea(.all)
         NavigationView{
             
