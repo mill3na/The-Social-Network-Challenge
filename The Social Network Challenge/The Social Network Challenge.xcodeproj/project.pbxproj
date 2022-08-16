@@ -143,6 +143,7 @@
 		F88BE3DF28A53D8D002D3D81 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F88BE3DD28A537B7002D3D81 /* APIStructs.swift */,
 				F88BE3E328A53E56002D3D81 /* Model.swift */,
 			);
 			path = Model;
@@ -152,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				F88BE3DB28A52823002D3D81 /* API.swift */,
-				F88BE3DD28A537B7002D3D81 /* APIStructs.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
