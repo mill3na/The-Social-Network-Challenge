@@ -13,8 +13,7 @@ struct ContentView: View {
         TabView{
             HomeScreenView()
                 .tabItem{
-                    Label("Home", systemImage: "house.fill")
-                    
+                    Label("Home", systemImage: "house.fill")                    
                 }
             FavoritesView()
                 .tabItem {
@@ -26,8 +25,6 @@ struct ContentView: View {
                     Label("Users", systemImage: "magnifyingglass")
                 }
             } // tab view
-        .navigationTitle("The Social Network Challenge")
-        .navigationBarTitleDisplayMode(.inline)
     } // navigation view
     }
 }
