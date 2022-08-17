@@ -56,7 +56,10 @@ struct LoginView: View {
                 .frame(maxWidth: .infinity, alignment: .center)
                 .padding(.top, 10)
                 
-                Button(action: {}, label: {
+                Button(action: {
+                    print($email)
+                    print($password)
+                }, label: {
                     Text("Log In")
                         .font(.system(size: 24, weight: .semibold))
                         .foregroundColor(.white)
