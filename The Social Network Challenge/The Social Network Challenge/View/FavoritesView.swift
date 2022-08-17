@@ -9,12 +9,18 @@ import SwiftUI
 
 struct FavoritesView: View {
     var body: some View {
-        NavigationView{
-            VStack{
-                Text("List Favorite Posts")
-            } // vstack
-            
-        } // navigation view
+        NavigationView {
+            ScrollView(.vertical, showsIndicators: false) {
+            }
+            .navigationTitle("Favorite Posts")
+            .frame(maxWidth: .infinity)
+            .background {
+                LinearGradient(
+                    gradient: .init(colors: [Color.blue,Color.white]), startPoint: .top, endPoint: .bottom
+                )
+            }
+            .ignoresSafeArea(.all)
+        }
     }
 }
 
