@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import SwiftKeychainWrapper
+
+let key = "user-token"
 
 
 // implemented api communication
@@ -103,4 +106,37 @@ func separatePostsWithWithoutMedia (_ posts: [Post]) -> ([Post], [Post]){
     }
 
     return (postsWithMedia, textPosts)
+}
+
+
+func saveToken(_ token: String, _ email: String) -> Bool{
+    let key = "user-token"
+    let saveTokenStatus: Bool = KeychainWrapper.standard.set(token, forKey: key)
+    
+    if saveTokenStatus == false{
+        print("Unable to save user's token.")
+    } else {
+        return true
+    }
+    
+    return false
+}
+
+func readToken(_ token: String) -> String? {
+    let key = "user-token"
+    
+    let retrieveToken: String? = KeychainWrapper.standard.string(forKey: key)
+    if let userToken = retrieveToken{
+        return userToken
+    } else {
+        print("Unable to access user token with parameters \(token), \(key)")
+        return nil
+    }
+}
+
+func deleteToken (_ token: String) -> Bool {
+    let key = "user-token"
+    
+    let removeTokenStatus: Bool = KeychainWrapper.standard.removeObject(forKey: key)
+    return false
 }
