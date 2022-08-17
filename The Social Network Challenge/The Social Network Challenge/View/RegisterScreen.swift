@@ -13,6 +13,7 @@ struct RegisterScreen: View {
     @State var confirmPassword = ""
     
     var body: some View {
+        NavigationView{
         VStack{
             Text("Sign In")
                 .font(.title)
@@ -70,12 +71,12 @@ struct RegisterScreen: View {
             .padding(.top, 10)
             HStack{
                 Text("Already a member?")
-                    .padding(.top, 5)
-                Button(action: {}, label: {
+                NavigationLink(destination: LoginView()){
                     Text("Log In")
                         .fontWeight(.semibold)
                         .foregroundColor(.gray)
-                })
+                }
+                .padding(.top, 5)
             }
             Spacer()
             Text("By creating an account, you agree with the Terms of Privacy and Services.")
@@ -83,7 +84,7 @@ struct RegisterScreen: View {
             
         }
         .padding()
-        
+        }
     }
 }
 
