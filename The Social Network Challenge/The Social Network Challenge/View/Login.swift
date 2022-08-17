@@ -57,6 +57,10 @@ struct LoginView: View {
                 .padding(.top, 10)
                 
                 Button(action: {
+//                    Task {
+//                        let newUser = NewUser(name: "Milena maia", email: "maia@teste.br", password: "batman")
+//                        await createNewUser(newUser: newUser)
+//                    }
                     print($email)
                     print($password)
                 }, label: {
