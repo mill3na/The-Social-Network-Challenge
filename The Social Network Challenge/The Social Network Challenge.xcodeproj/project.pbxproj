@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AA6F92DD28ABE5F5009011B8 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6F92DC28ABE5F5009011B8 /* Login.swift */; };
 		AAF99A2428ABB75500A59681 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88BE3E728AA8B45002D3D81 /* FavoritesView.swift */; };
+		AAFDFAE028AD326D001EAA0C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFDFADF28AD326D001EAA0C /* ProfileView.swift */; };
+		AAFDFAE328AD496D001EAA0C /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFDFAE228AD496D001EAA0C /* PostService.swift */; };
 		F833DD2D28AC61770020AF4E /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833DD2C28AC61770020AF4E /* RegisterScreen.swift */; };
 		F833DD2F28AD06740020AF4E /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833DD2E28AD06740020AF4E /* NewUser.swift */; };
 		F833DD3128AD09E90020AF4E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833DD3028AD09E90020AF4E /* User.swift */; };
@@ -45,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		AA6F92DC28ABE5F5009011B8 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		AAFDFADF28AD326D001EAA0C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		AAFDFAE228AD496D001EAA0C /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		F833DD2C28AC61770020AF4E /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		F833DD2E28AD06740020AF4E /* NewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
 		F833DD3028AD09E90020AF4E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -91,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AAFDFAE128AD4956001EAA0C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AAFDFAE228AD496D001EAA0C /* PostService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		F88BE3A528A525D3002D3D81 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +126,7 @@
 		F88BE3B028A525D3002D3D81 /* The Social Network Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				AAFDFAE128AD4956001EAA0C /* Services */,
 				F88BE3E128A53D9C002D3D81 /* View */,
 				F88BE3E028A53D92002D3D81 /* ViewModel */,
 				F88BE3DF28A53D8D002D3D81 /* Model */,
@@ -172,6 +185,7 @@
 				F88BE3B128A525D3002D3D81 /* The_Social_Network_ChallengeApp.swift */,
 				F88BE3B328A525D3002D3D81 /* HomeScreenView.swift */,
 				F88BE3E528AA8789002D3D81 /* ContentView.swift */,
+				AAFDFADF28AD326D001EAA0C /* ProfileView.swift */,
 				F88BE3E728AA8B45002D3D81 /* FavoritesView.swift */,
 				F88BE3E928AA8C3A002D3D81 /* UsersView.swift */,
 				AA6F92DC28ABE5F5009011B8 /* Login.swift */,
@@ -320,11 +334,13 @@
 				F88BE3B428A525D3002D3D81 /* HomeScreenView.swift in Sources */,
 				F88BE3E628AA8789002D3D81 /* ContentView.swift in Sources */,
 				F88BE3DE28A537B7002D3D81 /* Post.swift in Sources */,
+				AAFDFAE028AD326D001EAA0C /* ProfileView.swift in Sources */,
 				AAF99A2428ABB75500A59681 /* FavoritesView.swift in Sources */,
 				F88BE3DC28A52823002D3D81 /* APICalls.swift in Sources */,
 				AA6F92DD28ABE5F5009011B8 /* Login.swift in Sources */,
 				F833DD3128AD09E90020AF4E /* User.swift in Sources */,
 				F833DD2F28AD06740020AF4E /* NewUser.swift in Sources */,
+				AAFDFAE328AD496D001EAA0C /* PostService.swift in Sources */,
 				F88BE3B228A525D3002D3D81 /* The_Social_Network_ChallengeApp.swift in Sources */,
 				F88BE3EA28AA8C3A002D3D81 /* UsersView.swift in Sources */,
 			);

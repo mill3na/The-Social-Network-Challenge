@@ -9,11 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView{
-        TabView{
+        TabView {
             HomeScreenView()
                 .tabItem{
-                    Label("Home", systemImage: "house.fill")                    
+                    Label("Home", systemImage: "house.fill")
                 }
             FavoritesView()
                 .tabItem {
@@ -24,8 +23,13 @@ struct ContentView: View {
                 .tabItem{
                     Label("Users", systemImage: "magnifyingglass")
                 }
-            } // tab view
-    } // navigation view
+            
+            ProfileView()
+                .tabItem {
+                    Label("Profile", systemImage: "person")
+                }
+            
+        }
     }
 }
 

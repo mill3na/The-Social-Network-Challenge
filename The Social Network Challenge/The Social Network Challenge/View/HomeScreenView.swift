@@ -9,90 +9,64 @@ import SwiftUI
 
 struct HomeScreenView: View {
     
+    @ObservedObject private var viewModel = ViewModel()
+    
     @State var index = 0
     
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
-            VStack{
-                HStack{
-                    Button(action: {}) {
-                        Image(systemName: "photo.artframe")
-                            .renderingMode(.template)
-                            .foregroundColor(.white)
+        NavigationView {
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack{
+                    HStack{
+                       Spacer(minLength: 0)
                     }
-                    
+                    .padding(.horizontal)
+                    .padding(.top, 10)
                     Spacer()
-                    
-                    Button(action: {}) {
-                        Image(systemName: "cursorarrow.motionlines.click")
-                            .renderingMode(.template)
-                            .foregroundColor(.white)
-                    }
-                } // hstack
-                .padding()
-                
-                HStack{
-                    Text("Social Network Challenge")
-                        .font(.system(size: 40, weight: .bold))
-                        .foregroundColor(.white)
-                    
-                    Spacer(minLength: 0)
-                    
-                    Button(action: {}) {
+                    ForEach(viewModel.posts, id: \.id) { post in
                         
-                        Image("sun.min")
-                            .renderingMode(.template)
-                            .foregroundColor(.white)
-                            .rotationEffect(.init(degrees: 90))
+                        buildPost(post)
                     }
-                } // hstack
-                .padding(.horizontal)
-                
-                HStack{
-                    Text("Fotos")
-                        .font(.system(size: 15))
-                        .foregroundColor(index == 0 ? .white : Color.black.opacity(0.85))
-                        .fontWeight(.bold)
-                        .padding(.vertical, 6)
-                        .padding(.horizontal, 20)
-                        .background(Color.orange.opacity(index == 0 ? 1 : 0))
-                        .clipShape(Capsule())
-                        .onTapGesture {
-                            index = 0
-                        }
-                    Text("Textos")
-                        .font(.system(size: 15))
-                        .foregroundColor(index == 1 ? .white : Color.black.opacity(0.85))
-                        .fontWeight(.bold)
-                        .padding(.vertical, 6)
-                        .padding(.horizontal, 20)
-                        .background(Color.orange.opacity(index == 01 ? 1 : 0))
-                        .clipShape(Capsule())
-                        .onTapGesture {
-                            index = 1
-                        }
-                } // hstack
-                .padding(.horizontal)
-                .padding(.top, 10)
-                
-                // card view
-                
-                ZStack{
                     
+                } .task {
+                    await viewModel.getPosts()
                 }
                 
-                Spacer()
             }
-        }
-        .background(
-            LinearGradient(gradient: .init(colors: [Color.blue, Color.white]), startPoint: .top, endPoint: .bottom))
-        .ignoresSafeArea(.all)
-        NavigationView{
-            
-                
-            
+            .background(
+                LinearGradient(gradient: .init(colors: [Color.blue, Color.white]), startPoint: .top, endPoint: .bottom))
+            .navigationTitle("Explore")
         }
     }
+    
+    func buildPost(_ post: Post)-> some View{
+            
+            let initialURL: String = "http://adaspace.local/"
+            let media: String = post.media ?? ""
+            let url = initialURL + media
+            
+            return VStack{
+                GroupBox(label: Text(""),
+                         content: {
+                    
+                    if !media.isEmpty{
+                        AsyncImage(url: URL(string: url))
+                            .frame(
+                                width: UIScreen.main.bounds.width*0.9
+                            )
+                    }
+                    
+                    
+                    Text("\n \(post.content)")
+                }
+                    
+                )
+                .frame(width: UIScreen.main.bounds.width*0.9)
+                    .cornerRadius(10)
+                
+                
+            }
+        }
 }
 
 struct HomeScreenView_Previews: PreviewProvider {

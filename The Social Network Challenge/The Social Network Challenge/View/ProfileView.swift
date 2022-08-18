@@ -1,18 +1,20 @@
 //
-//  UsersView.swift
+//  ProfileView.swift
 //  The Social Network Challenge
 //
-//  Created by Milena Maia Araújo on 15/08/22.
+//  Created by Natalia Locatelli Barbosa on 17/08/22.
 //
+
+import Foundation
 
 import SwiftUI
 
-struct UsersView: View {
+struct ProfileView: View {
     var body: some View {
-        NavigationView{
+        NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
             }
-            .navigationTitle("Find Users")
+            .navigationTitle("Profile")
             .frame(maxWidth: .infinity)
             .background {
                 LinearGradient(
@@ -21,11 +23,5 @@ struct UsersView: View {
             }
             .ignoresSafeArea(.all)
         }
-    }
-}
-
-struct UsersView_Previews: PreviewProvider {
-    static var previews: some View {
-        UsersView()
     }
 }
