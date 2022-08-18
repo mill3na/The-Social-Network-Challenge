@@ -11,7 +11,10 @@ struct UsersView: View {
     var body: some View {
         NavigationView{
             ScrollView(.vertical, showsIndicators: false) {
+                Text("oi")
             }
+            
+            
             .navigationTitle("Find Users")
             .frame(maxWidth: .infinity)
             .background {

@@ -13,7 +13,6 @@ struct RegisterScreen: View {
     @State var confirmPassword = ""
     
     var body: some View {
-        NavigationView{
         VStack{
             Text("Sign In")
                 .font(.title)
@@ -84,7 +83,6 @@ struct RegisterScreen: View {
             
         }
         .padding()
-        }
     }
 }
 

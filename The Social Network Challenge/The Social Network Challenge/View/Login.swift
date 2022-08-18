@@ -76,6 +76,10 @@ struct LoginView: View {
                 .padding(.top, 10)
                 HStack{
                     Text("Don't have an account?")
+
+                    // Usar binding e passar ele pra Register Screen pra que ela faça o "Back" funcionar setando binding pra false
+                    //NavigationLink(destination: , isActive: , label: )
+
                     NavigationLink(destination: RegisterScreen()){
                         Text("Sign In")
                             .fontWeight(.semibold)

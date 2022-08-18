@@ -27,7 +27,6 @@ class ViewModel: ObservableObject {
             guard let dataResponse = data else {return }
             
             do {let allUsers = try JSONDecoder().decode([User].self, from: dataResponse)
-                //            print("object posts: (posts)")
                 completion(allUsers)
             } catch {
                 print("ERROR: \(error)")
@@ -53,6 +52,7 @@ class ViewModel: ObservableObject {
             let decodedCreateUserSession: Session = try JSONDecoder().decode(Session.self, from: data)
             print(decodedCreateUserSession)
             return decodedCreateUserSession
+            
         } catch {
             print(error)
         }
@@ -60,18 +60,7 @@ class ViewModel: ObservableObject {
         return nil
     }
     
-    func getPosts() async {
-            do {
-                let postsJSON = try await PostsService().getAllPosts()
-                publishPosts(post: postsJSON)
-                
-                
-                } catch {
-                    print(error)
-            }
-        }
-    
-    func getGPosts() async -> [Post]{
+    func getPost() async -> [Post]{
         
         let url = URL(string: "http://adaspace.local/posts")
         var urlRequest = URLRequest(url: url!)
@@ -91,20 +80,21 @@ class ViewModel: ObservableObject {
                     return date
                 }
                 
-                throw DecodingError.dataCorruptedError(in: container, debugDescription: "Cannot decode date string (dateString)")
+                throw DecodingError.dataCorruptedError(in: container, debugDescription: "Cannot decode date string \(dateString)")
             })
             
             do {
                 let (data, _) = try await URLSession.shared.data(for: urlRequest)
                 let allPosts = try decoder.decode([Post].self, from: data)
-                print(decoder)
-                for i in allPosts {
-                    print(i)
-                }
+//                print(decoder)
+//                for i in allPosts {
+//                    print(i)
+//                }
                 publishPosts(post: allPosts)
                 return allPosts
             } catch {
-                fatalError("ERROR: (error)")
+                print(error)
+                return []
             }
         }
     }
@@ -121,16 +111,34 @@ class ViewModel: ObservableObject {
                 postsWithMedia.append(post)
             }
         }
-        
         return (postsWithMedia, textPosts)
     }
     
+    func getUserById(_ userId: String, completion: @escaping (User?) -> Void) {
+        let url = URL(string: "http://adaspace.local/users/\(userId)")!
+        
+        let task = URLSession.shared.dataTask(with: url) {
+            data, response, error in guard
+                let dataResponse = data
+            else { return }
+            
+            do {let user = try JSONDecoder().decode(User.self, from: dataResponse)
+                completion(user)
+            
+            } catch{
+                print("ERROR GETTIN USER BY ID: \(error)")
+            }
+        }
+        
+        task.resume()
+
+    }
     
-    func saveToken(_ token: String, _ email: String) -> Bool{
+    func saveToken(_ token: String, _ email: String) -> Bool {
         let key = "user-token"
         let saveTokenStatus: Bool = KeychainWrapper.standard.set(token, forKey: key)
         
-        if saveTokenStatus == false{
+        if saveTokenStatus == false {
             print("Unable to save user's token.")
         } else {
             return true
@@ -159,13 +167,15 @@ class ViewModel: ObservableObject {
     }
     
     func publishUser(users:[User]){
-        DispatchQueue.main.async{
+        DispatchQueue.main.async { // metafora do Saco da Gabi
+//            gerenciador de threads
+            
             self.users = users
         }
     }
     
     func publishPosts(post:[Post]){
-        DispatchQueue.main.async{
+        DispatchQueue.main.async {
             self.posts = post
         }
     }
