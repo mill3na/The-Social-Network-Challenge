@@ -24,7 +24,7 @@ struct LoginView: View {
                 Spacer()
                 
                 VStack(alignment: .leading, spacing: 8, content: {
-                    Text("User name")
+                    Text("User name:")
                         .fontWeight(.regular)
                         .foregroundColor(.gray)
                     TextField("user@gmail.com", text: $email)
@@ -37,7 +37,7 @@ struct LoginView: View {
                 .padding(.top, 20)
                 
                 VStack(alignment: .leading, spacing: 8, content: {
-                    Text("User password")
+                    Text("User password:")
                         .fontWeight(.semibold)
                         .foregroundColor(.gray)
                     SecureField("********", text: $password)
