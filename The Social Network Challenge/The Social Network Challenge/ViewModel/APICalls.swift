@@ -134,7 +134,7 @@ class ViewModel: ObservableObject {
 
     }
     
-    func saveToken(_ token: String, _ email: String) -> Bool {
+    func saveToken(_ token: String) -> Bool {
         let key = "user-token"
         let saveTokenStatus: Bool = KeychainWrapper.standard.set(token, forKey: key)
         

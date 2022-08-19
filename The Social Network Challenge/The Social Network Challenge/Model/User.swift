@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct User: Codable {
+struct User: Codable, Identifiable {
 //    O codable serve para fazer a tradução de dados do tipo json nos dados que vamos usar no código
 //    Os nomes devem ser os mesmos que a API chama para que a conversão do Decoder funcione!
     

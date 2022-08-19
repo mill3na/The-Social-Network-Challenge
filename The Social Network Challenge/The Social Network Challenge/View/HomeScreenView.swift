@@ -29,7 +29,7 @@ struct HomeScreenView: View {
             }
             .background(
                 LinearGradient(gradient: .init(colors: [Color.blue, Color.white]), startPoint: .top, endPoint: .bottom))
-            .navigationTitle("Explore")
+            .navigationTitle("Explore Pic Me")
         }
         .task {
             await viewModel.getPost()

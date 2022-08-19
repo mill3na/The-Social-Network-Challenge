@@ -8,22 +8,40 @@
 import SwiftUI
 
 struct UsersView: View {
+    @ObservedObject private var viewModel = ViewModel()
+
+    @State var users: [User] = []
     var body: some View {
         NavigationView{
-            ScrollView(.vertical, showsIndicators: false) {
-                Text("oi")
-            }
-            
-            
+            List {
+                Section {
+                    ForEach(users) { user in
+                        NavigationLink {
+                            ScrollView {
+                                VStack {
+                                    Text(user.email)
+                                }
+                            }
+                        } label:{
+                            HStack{
+                                Text(user.name).padding()
+                                Spacer()
+                                Image(systemName: "heart").padding()
+                            } //hstack
+                        } // label
+                    }
+                    
+                } // section
+            } // list
             .navigationTitle("Find Users")
-            .frame(maxWidth: .infinity)
-            .background {
-                LinearGradient(
-                    gradient: .init(colors: [Color.blue,Color.white]), startPoint: .top, endPoint: .bottom
-                )
+            .onAppear {
+                viewModel.getUsers { users in
+                    self.users = users
+                    print(users)
+                }
             }
-            .ignoresSafeArea(.all)
-        }
+            
+        } // nav view
     }
 }
 

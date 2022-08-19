@@ -12,6 +12,8 @@ struct RegisterScreen: View {
     @State var password = ""
     @State var confirmPassword = ""
     
+    @ObservedObject private var viewModel = ViewModel()
+    
     var body: some View {
         VStack{
             Text("Sign In")
@@ -57,7 +59,15 @@ struct RegisterScreen: View {
                 Divider()
             })
             .padding(.top, 20)
-            Button(action: {}, label: {
+            Button(action: {
+                Task {
+                    let newUser = NewUser(name: "Milena maia", email: "maia@teste.br", password: "batman")
+                    await viewModel.createNewUser(newUser: newUser)
+                    
+                    print("User created! Email: \(email). ")
+                }
+
+            }, label: {
                 Text("Sign  In")
                     .font(.system(size: 24, weight: .semibold))
                     .foregroundColor(.white)

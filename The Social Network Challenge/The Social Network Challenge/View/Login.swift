@@ -2,7 +2,7 @@
 //  Login.swift
 //  The Social Network Challenge
 //
-//  Created by Natalia Locatelli Barbosa on 16/08/22.
+//  Created by Milena Maia Araújo on 16/08/22.
 //
 
 import Foundation
@@ -56,14 +56,7 @@ struct LoginView: View {
                 .frame(maxWidth: .infinity, alignment: .center)
                 .padding(.top, 10)
                 
-                Button(action: {
-//                    Task {
-//                        let newUser = NewUser(name: "Milena maia", email: "maia@teste.br", password: "batman")
-//                        await createNewUser(newUser: newUser)
-//                    }
-                    print($email)
-                    print($password)
-                }, label: {
+                NavigationLink(destination: ContentView()){
                     Text("Log In")
                         .font(.system(size: 24, weight: .semibold))
                         .foregroundColor(.white)
@@ -71,7 +64,21 @@ struct LoginView: View {
                         .background(.blue)
                         .cornerRadius(12)
                         .shadow(color: .black.opacity(0.3), radius: 12, x: 0, y: 0)
-                })
+                }
+                
+//                Button(action: {
+//
+//                    print($email)
+//                    print($password)
+//                }, label: {
+//                    Text("Log In")
+//                        .font(.system(size: 24, weight: .semibold))
+//                        .foregroundColor(.white)
+//                        .padding()
+//                        .background(.blue)
+//                        .cornerRadius(12)
+//                        .shadow(color: .black.opacity(0.3), radius: 12, x: 0, y: 0)
+//                })
                 .frame(maxWidth: .infinity, alignment: .center)
                 .padding(.top, 10)
                 HStack{

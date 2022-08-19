@@ -14,10 +14,10 @@ struct ContentView: View {
                 .tabItem{
                     Label("Home", systemImage: "house.fill")
                 }
-            FavoritesView()
-                .tabItem {
-                    Label("Favorites", systemImage: "heart")
-                }
+//            FavoritesView()
+//                .tabItem {
+//                    Label("Favorites", systemImage: "heart")
+//                }
             
             UsersView()
                 .tabItem{
